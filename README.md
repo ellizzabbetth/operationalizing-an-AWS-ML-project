@@ -1,9 +1,37 @@
 
 
+
+Computer Vision project: recognize types of dogs from images of dogs
+
+
+
+Goal: Operationalize the project so it's ready to be deployed live in a real world application
+
+Maxmize project speed and minimize cost
+Setup a Lambda function
+Resolve a security issue and check for security issues
+distributed training
+concurrency and autoscaling
+
+
+
+The major steps of the project include
+
+Deploy appropriate instances that allow you to maximize your projects’ speed and minimize costs.
+Set up a Lambda function so the project can provide outputs to users.
+Resolve a security issue related to your Lambda function, and check for other security issues.
+Set up your model training so it can train on multiple instances simultaneously.
+Set up concurrency and autoscaling for your project so it can manage high throughput with low latency.
+
+
+
+
 ## Step 1 : Training and deployment on Sagemaker
 
+create and open a Sagemaker instance. For this project, X instance was chosen because it is a powerful GPU which had previously been granted access by AWS.
 
 ![](screenshots/sagemaker_instance_setup.png)
+
 ## Step 2: EC2 Training
 
 
