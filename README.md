@@ -32,6 +32,14 @@ create and open a Sagemaker instance. For this project, X instance was chosen be
 
 ![](screenshots/sagemaker_instance_setup.png)
 
+
+![](screenshots/notebook_setup.png)
+
+![](screenshots/notebook_kernel.png)
+
+![](screenshots/hyperparameter-tuning-jobs.png)
+
+
 ## Step 2: EC2 Training
 
 
@@ -40,6 +48,35 @@ open the TrainedModels directory on your EC2 instance and take a screenshot of t
 
 
 https://knowledge.udacity.com/questions/924507
+
+GPU based instance types such as p3 are the ideal ones, but have limits on the student accounts. It will work on t3.medium but the training will be very slow.
+
+"Decide the type of instance you want, create it in your workspace, and write a justification of why you chose the instance type you did."
+
+A:  t3.medium, Deep Learning AMI Neuron (Ubuntu 22.04) 
+
+```
+wget https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip
+unzip dogImages.zip
+```
+
+```
+mkdir TrainedModels
+```
+
+```
+vim solution.py
+```
+
+```
+:set paste
+```
+
+
+![](screenshots/ec2_connection.png)
+
+
+![](screenshots/ec2_model_saved.png)
 
 
 ## Step 3: Lambda function setup
@@ -52,6 +89,11 @@ appropriate security policy to allow the lambda function to access all of the Sa
 
 ![](screenshots/lambda_function.png)
 
+
+Q: you should notice how it invokes the endpoint (with the invoke_endpoint() method) and how it sets up the return statement. Write at least 1 paragraph describing how this function is written and how it works.
+
+A: 
+
 ## Step 4: Security and testing
 
 ![](screenshots/iam_security.png)
@@ -60,3 +102,5 @@ appropriate security policy to allow the lambda function to access all of the Sa
 
 The purpose of concurrency on the lambda function is to accomodate high traffic because it will enable 
 the function to respond to more than one invocation at once.
+
+https://stackoverflow.com/questions/70279196/why-is-configure-autoscaling-greyed-out-on-sagemaker
