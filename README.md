@@ -1,5 +1,5 @@
 
-
+## Writeup
 
 Computer Vision project: recognize types of dogs from images of dogs
 
@@ -38,10 +38,17 @@ create and open a Sagemaker instance. For this project, X instance was chosen be
 open the TrainedModels directory on your EC2 instance and take a screenshot of the model that has been saved in it, to provide evidence that you completed this step
 ![](screenshots/ec2_setup.png)
 
+
+https://knowledge.udacity.com/questions/924507
+
+
 ## Step 3: Lambda function setup
 
 
 Write at least 1 paragraph describing how this function is written and how it works.
+
+Configured a Lambda function to invoke the deployed endpoint. The lambda function has the 
+appropriate security policy to allow the lambda function to access all of the Sagemaker endpoints.
 
 ![](screenshots/lambda_function.png)
 
@@ -51,3 +58,5 @@ Write at least 1 paragraph describing how this function is written and how it wo
 
 ## Step 5: Concurrency and auto-scaling
 
+The purpose of concurrency on the lambda function is to accomodate high traffic because it will enable 
+the function to respond to more than one invocation at once.
