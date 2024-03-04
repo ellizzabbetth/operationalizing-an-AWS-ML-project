@@ -5,7 +5,7 @@ Computer Vision project: recognize types of dogs from images of dogs
 
 
 
-Goal: Operationalize the project so it's ready to be deployed live in a real world application
+### Goal: Operationalize the project so it's ready to be deployed live in a real world application
 
 Maxmize project speed and minimize cost
 Setup a Lambda function
@@ -15,7 +15,7 @@ concurrency and autoscaling
 
 
 
-The major steps of the project include
+### The major steps of the project include
 
 Deploy appropriate instances that allow you to maximize your projects’ speed and minimize costs.
 Set up a Lambda function so the project can provide outputs to users.
