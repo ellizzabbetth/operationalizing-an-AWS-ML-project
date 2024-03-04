@@ -154,7 +154,7 @@ Below are the 33 estimates for each of the response classes returned in the body
 }
 `
 
-
+Along with a screenshot of the successful invokation of the multi-instance model from an endpoint.
 
 ![](screenshots/success-lambda-test.png)
 
