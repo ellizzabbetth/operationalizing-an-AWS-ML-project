@@ -28,6 +28,9 @@ Set up concurrency and autoscaling for your project so it can manage high throug
 
 ## Step 1 : Training and deployment on Sagemaker
 
+Moving the data to an S3 bucket was one of the first steps.
+
+![](screenshots/s3-bucket.png)
 
 Sagemaker `ml.g4dn.xlarge` instance was selected for the notebook because  it's relatively low cost for a GPU.
 
@@ -130,7 +133,20 @@ Ideally the minimium level of access should be granted to the specific roles.
 
 ![](screenshots/lambda_function.png)
 
-Below is the data returned in the body of the successful lambda invokation of the endpoint.
+
+
+
+Below is a screenshot of the lambda version and it's permissions.
+
+![](screenshots/lambda-version.png)
+
+![](screenshots/lambda-permissions.png)
+
+
+## Step 4: Security and testing
+
+
+Below are the 33 estimates for each of the response classes returned in the body of the successful lambda invokation of the endpoint.
 
 ```
 
@@ -142,15 +158,6 @@ Below is the data returned in the body of the successful lambda invokation of th
 
 ![](screenshots/success-lambda-test.png)
 
-
-Below is a screenshot of the lambda version and it's permissions.
-
-![](screenshots/lambda-version.png)
-
-![](screenshots/lambda-permissions.png)
-
-
-## Step 4: Security and testing
 
 The lambda function is setup with two security policies:
 1. Basic Lambda Function Execution
